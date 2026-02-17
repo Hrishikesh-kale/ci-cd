@@ -1,0 +1,24 @@
+name: Main Branch Build
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Simulate packaging
+        run: |
+          echo "Packaging artifact..."
+          sleep 5
+          echo "Artifact created"
+
+      - name: Simulate deployment
+        run: |
+          echo "Deploying to environment..."
+          sleep 5
+          echo "Deployment successful"
